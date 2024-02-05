@@ -2,8 +2,9 @@
 Writing a *.json file using Faker to create randomly generated user data.
 """
 import json
+import os
 
-with open("json_files/data.json", "w") as output:
+with open(os.path.join("json_files", "data.json"), "w") as output:
     fake = Faker()
     all_data = {}
     all_data["records"] = []

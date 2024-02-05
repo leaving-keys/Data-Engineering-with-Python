@@ -2,10 +2,11 @@
 Writing a *.csv file using the faker library to generate some user data.
 """
 import csv
+import os
 
 from faker import Faker
 
-with open("csv_files/data.csv", "w") as output:
+with open(os.path.join("csv_files", "data.csv"), "w") as output:
     fake = Faker()
     csv_writer = csv.writer(output)
 

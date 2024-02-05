@@ -2,8 +2,9 @@
 Reading a *.json file using pandas.
 """
 import pandas
+import os
 
-with open("json_files/data.json") as file:
+with open(os.path.join("json_files", "data.json")) as file:
     json_string = file.read()
     json_data = pandas.io.json.loads(json_string)
     df = pandas.json_normalize(json_data, record_path="records")
