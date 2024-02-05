@@ -1,7 +1,6 @@
 """
 Print some information from a *.csv file using the csv library.
 """
-
 import csv
 
 with open("csv_files/data.csv") as file:
